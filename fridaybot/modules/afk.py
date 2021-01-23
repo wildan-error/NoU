@@ -49,10 +49,10 @@ async def _(event):
         if reason:
             await borg.send_message(
                 event.chat_id,
-                f"**he's ded again ffs, can someone wake him up?** \n__He is ded Because Of__ `{reason}`",
+                f"**he's ded again ffs, can someone wake him up?** \n__He is ded because Of__ `{reason}`",
             )
         else:
-            await borg.send_message(event.chat_id, f"**ded right now. come back later when resurrected**.")
+            await borg.send_message(event.chat_id, f"**ded right now. come back later when resurrected.**.")
         await asyncio.sleep(5)
         await event.delete()
         try:
@@ -156,7 +156,7 @@ async def on_afk(event):
             else:
                 f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = (f"I Am **[AFK]** Right Now. \n**Last Seen :** `{total_afk_time}`\n**Reason** : `{reason}`" if reason else f"I Am **[AFK]** Right Now. \n**Last Seen :** `{total_afk_time}`")
+        message_to_reply = (f"I Am **[DED]** Right Now. come back later when I resurrected \n**Last Seen :** `{total_afk_time}`\n**Reason** : `{reason}`" if reason else f"I Am **[AFK]** Right Now. \n**Last Seen :** `{total_afk_time}`")
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
