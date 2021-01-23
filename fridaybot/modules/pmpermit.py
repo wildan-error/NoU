@@ -34,7 +34,7 @@ botisnoob = Var.TG_BOT_USER_NAME_BF_HER
 devs_id = [1263617196, 573738900, 1315076555]
 
 USER_BOT_NO_WARN = (
-    "**Hello, This is Friday PM Protection Service ⚠️**\n\n"
+    "**Hello, This Neko-chan! a faithful maid that serving [DEFAULTUSER] - sama⚠️**\n\n"
     f"`My Master {DEFAULTUSER} is Busy Right Now !` \n"
     "**I Request You To Choose A Reason You Have Came For** 👀 \n\n"
     f"**{CUSTOM_MIDDLE_PMP}**"
