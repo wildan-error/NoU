@@ -49,7 +49,7 @@ async def _(event):
         if reason:
             await borg.send_message(
                 event.chat_id,
-                f"**he's ded again ffs, can someone wake him up?.** \n__He is ded Because Of__ `{reason}`",
+                f"**he's ded again ffs, can someone wake him up?** \n__He is ded Because Of__ `{reason}`",
             )
         else:
             await borg.send_message(event.chat_id, f"**ded right now. come back later when resurrected**.")
