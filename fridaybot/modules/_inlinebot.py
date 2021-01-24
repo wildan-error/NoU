@@ -174,7 +174,7 @@ async def rip(event):
         return
     await event.get_chat()
     him_id = event.query.user_id
-    text1 = f"You Have Chosed A Probhited Option. Therefore, You Have Been Blocked By {Var.TG_BOT_USER_NAME_BF_HER}
+    text1 = "You Have Chosed A Probhited Option. Therefore, You Have Been Blocked By Master
     await event.edit("Choice Not Accepted ❌")
     await borg.send_message(event.query.user_id, text1)
     await borg(functions.contacts.BlockRequest(event.query.user_id))
