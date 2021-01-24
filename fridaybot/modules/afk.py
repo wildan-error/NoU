@@ -1,5 +1,5 @@
 """AFK Plugin for @FridayOT
-Syntax: .afk REASON"""
+Syntax: .ded REASON"""
 import asyncio
 import datetime
 from datetime import datetime
@@ -21,7 +21,7 @@ afk_start = {}
 
 
 @friday.on(
-    events.NewMessage(pattern=r"\.afk ?(.*)", outgoing=True)
+    events.NewMessage(pattern=r"\.ded ?(.*)", outgoing=True)
 )  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
@@ -49,10 +49,10 @@ async def _(event):
         if reason:
             await borg.send_message(
                 event.chat_id,
-                f"**he's ded again ffs, can someone wake him up?** \n__He is ded because Of__ `{reason}`",
+                f"**my master ded, can someone wake him up?** \n__He is ded because Of__ `{reason}`",
             )
         else:
-            await borg.send_message(event.chat_id, f"**ded right now. come back later when resurrected.**.")
+            await borg.send_message(event.chat_id, f"**ded right now. come back later when resurrected.**")
         await asyncio.sleep(5)
         await event.delete()
         try:
@@ -166,7 +166,7 @@ async def on_afk(event):
 
 CMD_HELP.update(
     {
-        "afk": ".afk <Reason> \
-\nUsage: Gets You Afk"
+        "ded": ".ded <Reason> \
+\nUsage: notify another person if you're ded"
     }
 )
