@@ -50,7 +50,7 @@ async def _(event):
     if input_str:
         sticker_emoji = input_str
     moods = await edit_or_reply(
-        event, "`Hello, This Sticker Looks Noice. Mind if I steal it`"
+        event, "`Legends from another world says, steaaaaal!`"
     )
     user = await bot.get_me()
     if not user.username:
@@ -77,7 +77,7 @@ async def _(event):
             ok, file_name=file_ext_ns_ion
         )
         os.remove(sticker)
-    await moods.edit("`Inviting This Sticker To Your Pack 🚶`")
+    await moods.edit("`misi om, mau maling tikel nya`")
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
         dt = now + datetime.timedelta(minutes=1)
@@ -128,7 +128,7 @@ async def _(event):
                         await moods.edit(
                             "**Pack No. **"
                             + str(prevv)
-                            + "** full! Making a new Pack, Vol. **"
+                            + "** jir, penuh. pindah ke sticker pack lain bang!**"
                             + str(pack)
                         )
                         if is_a_s:
@@ -175,7 +175,7 @@ async def _(event):
                         await moods.edit(
                             "Pack No. "
                             + str(prevv)
-                            + " full! Switching to Vol. "
+                            + " jir penuh lagi, pindah sticker pack lagi. "
                             + str(pack)
                         )
                         await silently_send_message(bot_conv, "/addsticker")
