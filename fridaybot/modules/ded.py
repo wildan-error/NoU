@@ -76,7 +76,7 @@ async def set_not_afk(event):
     if afk_start != {}:
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
-    if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
+    if ".ded" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
         shite = await borg.send_message(
             event.chat_id,
             "__RESURRECTED!__\n**No Longer ded.**\n `I Was ded for:``"
@@ -122,7 +122,7 @@ async def on_afk(event):
         total_afk_time = str((afk_end - afk_start))
     afk_since = "**a while ago**"
     current_message_text = event.message.message.lower()
-    if "afk" in current_message_text:
+    if "ded" in current_message_text:
         # fridaybot's should not reply to other fridaybot's
         # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
         return False
