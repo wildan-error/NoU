@@ -18,7 +18,7 @@ async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         time.sleep(3)
         if e.is_group:
-            await e.edit("`This is Very kensur Group, So Me iz Leaving.`")
+            await e.edit("`dahlah, gatau lagi. bye. `")
             await borg(LeaveChannelRequest(e.chat_id))
         else:
             await e.edit("`Boss, This is Not A Chat`")
