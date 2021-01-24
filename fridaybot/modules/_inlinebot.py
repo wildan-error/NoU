@@ -44,6 +44,7 @@ async def inline_handler(event):
             buttons=[
                 [custom.Button.inline("Show Stats ?", data="terminator")],
                 [Button.url("Repo 🇮🇳", "https://github.com/StarkGang/FridayUserbot")],
+                [Button.url("Funny Mod Repo", "https://github.com/wildan-error/NoU")]
                 [Button.url("Join Channel ❤️", "t.me/Fridayot")],
             ],
         )
@@ -173,13 +174,13 @@ async def rip(event):
         return
     await event.get_chat()
     him_id = event.query.user_id
-    text1 = "You Have Chosed A Probhited Option. Therefore, You Have Been Blocked By UserBot. 🇮🇳"
+    text1 = f"You Have Chosed A Probhited Option. Therefore, You Have Been Blocked By {Var.TG_BOT_USER_NAME_BF_HER}
     await event.edit("Choice Not Accepted ❌")
     await borg.send_message(event.query.user_id, text1)
     await borg(functions.contacts.BlockRequest(event.query.user_id))
     await borg.send_message(
             LOG_CHAT,
-            f"Hello, A Noob [Nibba](tg://user?id={him_id}) Selected Probhited Option, Therefore Blocked."
+            f"Praise me master! I have blocked, A Noob [Nibba](tg://user?id={him_id}) because he selected Probhited Option, Therefore I Blocked him."
     )
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"backme")))
