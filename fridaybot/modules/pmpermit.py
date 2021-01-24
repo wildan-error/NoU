@@ -25,7 +25,7 @@ DEFAULTUSER = (
     str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 )
 CUSTOM_MIDDLE_PMP = (
-    str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "Protection By Friday 🇮🇳"
+    str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else f"Protection By {Var.TG_BOT_USER_NAME_BF_HER}"
 )
 USER_BOT_WARN_ZERO = "You Have Attempted To Spam Masters Inbox So Inorder To Avoid Over Spam , You Have Been Blocked By me 😡"
 
@@ -66,7 +66,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await asyncio.sleep(3)
                 await rko.delete()           
 
-    @borg.on(friday_on_cmd(pattern="(a|approve)$"))
+    @borg.on(friday_on_cmd(pattern="(a|ok|approve)$"))
     async def approve(event):
         if event.fwd_from:
             return
@@ -107,7 +107,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await event.edit('`User Already Approved !`')
                 await event.delete()
                 
-    @borg.on(friday_on_cmd(pattern="block$"))
+    @borg.on(friday_on_cmd(pattern="(block|gtfo)$"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -119,7 +119,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             await event.edit("Blocked [{}](tg://user?id={})".format(firstname, event.chat_id))
             await borg(functions.contacts.BlockRequest(event.chat_id))
 
-    @borg.on(friday_on_cmd(pattern="(da|disapprove)$"))
+    @borg.on(friday_on_cmd(pattern="(da|bye|disapprove)$"))
     async def dapprove(event):
         if event.fwd_from:
             return
