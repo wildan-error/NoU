@@ -49,7 +49,7 @@ PM_IMG = Config.ALIVE_IMAGE
 async def friday(alive):
     await alive.get_chat()
     uptime = get_readable_time((time.time() - Lastupdate))
-    repo = "https://github.com/wildan-error/NoU"
+    repo = Repo ()
     branch_name = repo.active_branch.name
     pm_caption = ("➥ **FRIDAY IS:** `ONLINE`\n\n"
                   "➥ **SYSTEMS STATS**\n"
