@@ -201,7 +201,7 @@ async def _(event):
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
     await moods.edit(
-        f"`This Sticker Has Came To Your Pack.` \n**Check It Out** [Here](t.me/addstickers/{packshortname})"
+        f"`makasih om, tikel nya udah berhasil saya maling.` \n**nih, koleksi stiker curian saya ** [disini](t.me/addstickers/{packshortname})"
     )
     os.remove(sedpath + "/" + "@FridayOT.png")
 
