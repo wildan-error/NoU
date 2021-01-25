@@ -39,10 +39,10 @@ async def _(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("PLease, Reply To A Sticker / Image To Add It Your Pack")
+        await event.edit("lah, gambar/sticker nya mana? bales dulu ke stiker/gambar! ")
         return
     if not event.is_reply:
-        await moods.edit("Reply to a photo to add to my personal sticker pack.")
+        await moods.edit("foto/stiker jir, bukan text ._.")
         return
     reply_message = await event.get_reply_message()
     sticker_emoji = await get_sticker_emoji(event)
@@ -50,7 +50,7 @@ async def _(event):
     if input_str:
         sticker_emoji = input_str
     moods = await edit_or_reply(
-        event, "`Legends from another world says, steaaaaal!`"
+        event, "`wow, nice sticker you got there!`"
     )
     user = await bot.get_me()
     if not user.username:
@@ -59,7 +59,7 @@ async def _(event):
     userid = event.sender_id
     packname = f"@{user.username} KangPack {pack}"
     packshortname = f"FRIDAY_{userid}_Pack"
-    await moods.edit("`This Sticker is Gonna Get Stolen.....`")
+    await moods.edit("`Legends from another world says, steaaaaal!`")
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@FRIDAYOT.png"
     uploaded_sticker = None
