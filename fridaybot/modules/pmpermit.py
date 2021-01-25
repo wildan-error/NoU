@@ -66,7 +66,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await asyncio.sleep(3)
                 await rko.delete()           
 
-    @borg.on(friday_on_cmd(pattern="(a|ok|approve)$"))
+    @borg.on(friday_on_cmd(pattern="(a|y|approve)$"))
     async def approve(event):
         if event.fwd_from:
             return
@@ -119,7 +119,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             await event.edit("Blocked [{}](tg://user?id={})".format(firstname, event.chat_id))
             await borg(functions.contacts.BlockRequest(event.chat_id))
 
-    @borg.on(friday_on_cmd(pattern="(da|bye|disapprove)$"))
+    @borg.on(friday_on_cmd(pattern="(da|n|disapprove)$"))
     async def dapprove(event):
         if event.fwd_from:
             return
