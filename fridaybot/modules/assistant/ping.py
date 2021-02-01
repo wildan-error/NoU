@@ -46,7 +46,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-@assistant_cmd("ping", is_args=False)
+@assistant_cmd("cuk", is_args=False)
 @peru_only
 async def _(event):
     start = datetime.now()
@@ -55,5 +55,5 @@ async def _(event):
     uptime = get_readable_time((time.time() - Lastupdate))
     await tgbot.send_message(
         event.chat_id,
-        f"**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n ➲ `{ms}` \n ➲ `{uptime}`",
+        f"**iyo cuk, iseh urip aku!** \n ➲ `{ms}` \n ➲ `{uptime}`",
     )
