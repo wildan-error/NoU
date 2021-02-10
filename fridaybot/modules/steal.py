@@ -39,10 +39,10 @@ async def _(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("lah, gambar/sticker nya mana? bales dulu ke stiker/gambar! ")
+        await event.edit("reply to a sticker you dumb master!")
         return
     if not event.is_reply:
-        await moods.edit("foto/stiker jir, bukan text ._.")
+        await moods.edit("it's not a sticker. u blind?")
         return
     reply_message = await event.get_reply_message()
     sticker_emoji = await get_sticker_emoji(event)
@@ -77,7 +77,7 @@ async def _(event):
             ok, file_name=file_ext_ns_ion
         )
         os.remove(sticker)
-    await moods.edit("`misi om, mau maling tikel nya`")
+    await moods.edit("`hehe, got your sticker in my hand.`")
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
         dt = now + datetime.timedelta(minutes=1)
@@ -201,7 +201,7 @@ async def _(event):
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
     await moods.edit(
-        f"`makasih om, tikel nya udah berhasil saya maling.` \n**nih, koleksi stiker curian saya ** [disini](t.me/addstickers/{packshortname})"
+        f"`thanks for your patronage sir. I'm successfully steal your sticker.` \n** you can find it ** [here](t.me/addstickers/{packshortname})"
     )
     os.remove(sedpath + "/" + "@FridayOT.png")
 
